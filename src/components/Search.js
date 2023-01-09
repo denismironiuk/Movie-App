@@ -27,7 +27,7 @@ function Search({ searchMovies,filterType,setFilterType, setSearchMovie,handlech
                         setSearchMovie(e.target.value ?e.target.value:'matrix')
 
                     },3000) }
-                    onKeyDown={handleKey}
+                   
                 />
                
 
