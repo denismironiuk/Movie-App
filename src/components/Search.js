@@ -29,11 +29,7 @@ function Search({ searchMovies,filterType,setFilterType, setSearchMovie,handlech
                     },3000) }
                     onKeyDown={handleKey}
                 />
-                <button onClick={(e) => {
-                      
-                    searchMovies(filterType)
-                   
-                }} className='btn'>Search</button>
+               
 
             </div>
             <div className='radio-container'>
