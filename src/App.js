@@ -17,11 +17,14 @@ const handlechangeMovie=(e)=>{
 
   useEffect(()=>{
     console.log(API_KEY)
-      fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchMovie}${filterType!=='all' ? `&type=${filterType}`:''}`).then(response=>{
+      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchMovie}${filterType!=='all' ? `&type=${filterType}`:''}`).then(response=>{
           return response.json()
       }).then(resData=>{
           
           setMovies(resData.Search)
+      })
+      .catch((err)=>{
+        console.error(err)
       })
   },[filterType,searchMovie])
   
